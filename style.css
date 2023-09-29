@@ -237,7 +237,7 @@ padding: 10vh 10vw 3vh 10vw;
     text-align: center;
     flex: 1;
 }
-.card:hover::before{
+.card:hover::before, .card:active::before{
     width: 80%;
     left: 10%;
 }
@@ -400,7 +400,7 @@ main {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
-    .service-boxes a {
+    .service-boxes div {
         max-width: 90vw;
         aspect-ratio: 16 / 9;
         position: relative;
@@ -412,7 +412,7 @@ main {
         background-size: cover;
         background-position: center;
     }
-    .service-boxes a p {
+    .service-boxes div p {
         transition: .5s;
         position: absolute;
         margin: 0;
@@ -424,7 +424,7 @@ main {
             color: var(--background);
             text-transform: uppercase;
     }
-    .service-boxes a p:nth-of-type(2) {
+    .service-boxes div p:nth-of-type(2) {
         padding: 1em;
         font-size: calc(1rem + .5vw);
             font-weight: 300;
@@ -433,28 +433,28 @@ main {
             text-transform: unset;
        translate: 100%;
     }
-    .service-boxes a:hover p:nth-of-type(1) {
+    .service-boxes div:hover p:nth-of-type(1), .service-boxes div:active p:nth-of-type(1) {
         translate: -30ch;
     }
-    .service-boxes a:hover p:nth-of-type(2) {
+    .service-boxes div:hover p:nth-of-type(2), .service-boxes div:active p:nth-of-type(2) {
         translate: 0;
     }
-    & .service-boxes a:nth-of-type(1) {
+    & .service-boxes div:nth-of-type(1) {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen5.avif');
     }
-    & .service-boxes a:nth-of-type(2) {
+    & .service-boxes div:nth-of-type(2) {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen6.avif');
     }
-    & .service-boxes a:nth-of-type(3) {
+    & .service-boxes div:nth-of-type(3) {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen3.avif');
     }
-    & .service-boxes a:nth-of-type(4) {
+    & .service-boxes div:nth-of-type(4) {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen8.avif');
     }
-    & .service-boxes a:nth-of-type(5) {
+    & .service-boxes div:nth-of-type(5) {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen2.avif');
     }
-    & .service-boxes a:nth-of-type(6) {
+    & .service-boxes div:nth-of-type(6) {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen7.avif');
     }
 }
