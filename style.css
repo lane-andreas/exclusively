@@ -1,7 +1,7 @@
 :root {
 --text: #000000;
 --background: #ffffff;
---gray: #f8f8f8;
+--grey: #F9F9F9;
 --primary: #00bfff;
 --secondary: #cce7f0;
 --accent: #3699ba;
@@ -287,7 +287,7 @@ footer {
         gap: calc(1rem + 2vw);
     }
     & iconify-icon{
-        font-size: calc(1rem + 2vw);
+        font-size: calc(2rem + 1vw);
         color: var(--text);
     }
     & .hours{
@@ -323,6 +323,7 @@ footer {
 }
 
 main {
+    padding-bottom: 10vh;
     display: flex;
     justify-content: space-evenly;
     font-size: calc(1rem + .2vw);
@@ -333,6 +334,7 @@ main {
     max-width: 60ch;
 }
 & h3 {
+    text-transform: uppercase;
     margin-left: -1em;
     font-size: calc(1rem + 1vw);
         font-weight: 800;
@@ -359,6 +361,9 @@ main {
 
 @media (width< 1000px) {
     main{
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
         .certifications {
             margin-top: 1em;
@@ -368,5 +373,101 @@ main {
         & h3{
             text-align: center;
         }
+    }
+}
+
+.services {
+    padding-top: 10vh;
+    min-height: 100vh;
+    background-color: var(--grey);
+    & h4 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: calc(1rem + 2vw);
+        font-weight: 1000;
+        font-family: var(--title);
+    }
+    & p {
+        margin: 1em 1em 0 1em;
+        text-align: center;
+        font-size: calc(1rem + .2vw);
+        font-weight: 400;
+        font-family: var(--sub);
+    }
+    .service-boxes {
+        padding: 5vw;
+        gap: 5vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .service-boxes a {
+        max-width: 90vw;
+        aspect-ratio: 16 / 9;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: clip;
+        text-decoration: none;
+        background-size: cover;
+        background-position: center;
+    }
+    .service-boxes a p {
+        transition: .5s;
+        position: absolute;
+        margin: 0;
+        padding: 1em;
+        text-shadow: 0 0 2vw black;
+            font-size: calc(1rem + 1vw);
+            font-weight: 800;
+            font-family: var(--title);
+            color: var(--background);
+            text-transform: uppercase;
+    }
+    .service-boxes a p:nth-of-type(2) {
+        padding: 1em;
+        font-size: calc(1rem + .5vw);
+            font-weight: 300;
+            font-family: var(--sub);
+            color: var(--background);
+            text-transform: unset;
+       translate: 100%;
+    }
+    .service-boxes a:hover p:nth-of-type(1) {
+        translate: -30ch;
+    }
+    .service-boxes a:hover p:nth-of-type(2) {
+        translate: 0;
+    }
+    & .service-boxes a:nth-of-type(1) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen5.avif');
+    }
+    & .service-boxes a:nth-of-type(2) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen6.avif');
+    }
+    & .service-boxes a:nth-of-type(3) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen3.avif');
+    }
+    & .service-boxes a:nth-of-type(4) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen8.avif');
+    }
+    & .service-boxes a:nth-of-type(5) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen2.avif');
+    }
+    & .service-boxes a:nth-of-type(6) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen7.avif');
+    }
+}
+
+
+@media (width < 1200px) {
+    .service-boxes {
+            grid-template-columns: 1fr 1fr !important;
+        }
+}
+
+@media (width < 800px) {
+    .service-boxes {
+        grid-template-columns: 1fr !important;
     }
 }
