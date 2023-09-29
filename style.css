@@ -470,6 +470,9 @@ main {
 }
 
 @media (width < 800px) {
+    header {
+        background-attachment: scroll !important;
+    }
     .service-boxes {
         grid-template-columns: 1fr !important;
     }
