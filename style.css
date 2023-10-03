@@ -1009,13 +1009,16 @@ footer {
             font-family: var(--title);
      }
      & ul {
-        margin: 1em 1em 2em 1em;
+        margin: 1em;
         list-style-type: none;
         text-decoration: none;
         font-size: calc(1rem + .2vw);
             font-weight: 400;
             font-family: var(--sub);
      }
+    & ul:nth-of-type(1) {
+         margin-bottom: 2em;
+    }
      & li {
         padding: .5em;
      }
