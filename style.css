@@ -942,7 +942,7 @@ footer {
         border: solid .1em var(--primary);
     }
     & input:focus ~ label, textarea:focus ~ label {
-        padding: .5em .7em;
+        translate: 0 -.2em;
     }
     & label {
         transition: .2s;
