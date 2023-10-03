@@ -6,16 +6,18 @@ document.addEventListener('DOMContentLoaded', function () {
     portfolioImages.forEach(image => {
         image.addEventListener('click', function () {
           const imgModul = document.querySelector('#img-modul');
+          
             this.classList.toggle('max-width');
+
           if (imgModul) {
-            // Check if the element exists
-            imgModul.remove(); // If it exists, remove it
+            imgModul.remove();
+
         } else {
-            // If it doesn't exist, create and append it
             const newElement = document.createElement('div');
             newElement.id = 'img-modul';
             document.body.appendChild(newElement);
         }
+
         });
     });
 

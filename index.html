@@ -30,7 +30,7 @@
 
 <body ontouchstart="">
    <div id="home" class="catch">
-      Get your free estimate today!
+      <a href="#contact">Get your free estimate today!</a>
       <div class="catch-links">
       <a href="mailto:ExclusivelyKandb@aol.com" target="_blank">
          <iconify-icon icon="mdi:email"></iconify-icon>ExclusivelyKandb@aol.com
@@ -45,7 +45,7 @@
       <ul id="nav-items">
          <li><button class="menu">CLOSE</button></li>
          <li><a class="menu" href="#home">HOME</a></li>
-         <li><a class="menu" href="#about">ABOUT US</a></li>
+         <li><a class="menu" href="#about-tag">ABOUT US</a></li>
          <li><a class="menu" href="#services">SERVICES</a></li>
          <li><a class="menu" href="#portfolio">PROJECTS</a></li>
          <li><a class="menu" href="#reviews">REVIEWS</a></li>
@@ -60,19 +60,19 @@
    <section class="about">
       <div class="cards">
          <div class="card">
-            <iconify-icon icon="solar:buildings-2-line-duotone"></iconify-icon>
+            <iconify-icon icon="ic:sharp-maps-home-work"></iconify-icon>
             <h2>Craftsmanship</h2>
             <p>Our team's meticulous craftsmanship ensures flawless results in every project, down to the finest detail.
             </p>
          </div>
          <div class="card">
-            <iconify-icon icon="ph:sparkle-duotone"></iconify-icon>
+            <iconify-icon icon="material-symbols:design-services"></iconify-icon>
             <h2>Design</h2>
             <p>Our passion lies in creating inspired design concepts that breathe new life into your space, making it
                truly exceptional.</p>
          </div>
          <div class="card">
-            <iconify-icon icon="solar:wallet-money-line-duotone"></iconify-icon>
+            <iconify-icon icon="ion:cash-sharp"></iconify-icon>
             <h2>Economical</h2>
             <p>We provide budget-conscious solutions that don't compromise on excellence, giving you the best value for
                your investment.</p>
@@ -80,6 +80,7 @@
       </div>
    </section>
    <main id="about">
+      <div id="about-tag"></div>
       <div class="bio">
          <h3>A Little About Us</h3>
          <p>With over 25 years of unwavering commitment to excellence, Exclusively Kitchens and Bathrooms has been the
@@ -194,20 +195,47 @@
          for home renovations that truly make a difference!</p>
       </div>
    </section>
-   <section id="contact"><form action="https://formsubmit.co/jeffsplumbingdm@gmail.com" method="POST">
+   <section id="contact">
+      <h6>Contact Us</h6>
+      <p>Reach out and let's discuss your project.</p>
+      <div class="contact-container">
+      <form action="https://formsubmit.co/ExclusivelyKandb@aol.com" method="POST">
       <div class="input-container">
-         <input type="text" name="name" id="name" autocomplete="name" required /><label class="name"
-            for="name">Name</label>
+         <input type="text" name="name" id="name" autocomplete="name" placeholder="Name" required /><label
+            for="name"><iconify-icon icon="mdi:account"></iconify-icon></label>
       </div>
       <div class="input-container">
-         <input type="email" name="email" id="email" autocomplete="email" required /><label class="form-3"
-            for="email">Email</label>
+         <input type="email" name="email" id="email" autocomplete="email" placeholder="Email" required /><label
+            for="email"><iconify-icon icon="material-symbols:alternate-email"></iconify-icon></label>
+      </div>
+      <div class="input-container">
+         <input type="text" name="street-address" id="street-address" autocomplete="street-address" placeholder="Address" required /><label
+            for="street-address"><iconify-icon icon="material-symbols:location-on"></iconify-icon></label>
+      </div>
+      <div class="input-container">
+         <input type="tel" id="phone" name="phone" placeholder="Phone Number" autocomplete="tel" required /><label
+            for="phone"><iconify-icon icon="material-symbols:phone-iphone"></iconify-icon></label>
       </div>
       <div class="textarea-container">
-         <textarea id="message" name="message" rows="4" required></textarea><label for="message">Message</label>
+         <button type="submit">Send</button><textarea id="message" name="message" rows="3" placeholder="Your message here" required></textarea><label for="message"><iconify-icon icon="material-symbols:chat-sharp"></iconify-icon></label>
       </div>
-      <button type="submit">Send</button>
-   </form></section>
+      
+   </form>
+   <div class="contact-info">
+      <lead>Connect with our experts for:</lead>
+      <ul>
+<li>Inquiries about our services.</li>
+<li>A customized project quote.</li>
+<li>Scheduling a consultation.</li>
+      </ul>
+      <lead>Contact us via the details below:</lead>
+      <ul>
+         <li>Phone: (405) 520-6908</li>
+         <li>Email: ExclusivelyKandb@aol.com</li>
+         <li>Address: Blanchard, OK 73010-3477</li>
+      </ul>
+   </div></div>
+</section>
    <footer>
       <div class="footer-top">
          <div class="hours">
@@ -236,12 +264,11 @@
          </div>
       </div>
       <div class="footer-footer">
-         <p>@Copyright. All Rights Reserved</p>
-         <p>Privacy Policy</p>
+         <p>Copyright @ 2023 <a href="https://lane-andreas.com/" target="_blank">Lane Andreas</a></p>
+         <a href="policies.html" target="_blank">Privacy Policy</a>
       </div>
    </footer>
    <script src="script.js"></script>
    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
 </body>
-
 </html>

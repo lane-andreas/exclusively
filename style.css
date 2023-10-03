@@ -40,9 +40,11 @@
     margin: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    line-height: 1.5;
 }
 
 html {
+    scroll-padding-top: 5vh;
     scroll-behavior: smooth;
 }
 
@@ -50,6 +52,7 @@ body {
     position: relative;
     overflow-x: clip;
 }
+
 
 .catch {
     position: relative;
@@ -66,7 +69,8 @@ body {
         align-items: flex-start;
         gap: 1em;
         position: absolute;
-        top: calc(100vh -  5em);
+        top: calc(100vh - 5em);
+        top: calc(100svh -  5em);
         left: 1em;
         text-decoration: inherit;
         color: inherit;
@@ -483,9 +487,13 @@ footer {
         -ms-flex-pack: distribute;
         justify-content: space-around;
     }
+    .footer-footer a {
+        color: inherit;
+    }
 }
 
 #about {
+    position: relative;
     padding-bottom: 10vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -497,7 +505,11 @@ footer {
     font-weight: 400;
     font-family: var(--sub);
     color: var(--text);
-
+#about-tag {
+    position: absolute;
+    margin-top: -15vh;
+    top: 0;
+}
     .bio {
         max-width: 60ch;
     }
@@ -901,3 +913,127 @@ footer {
         }
         }
     }
+
+#contact {
+    padding-top: 10vh;
+        padding-bottom: 5vw;
+        & form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: calc(1rem + 1vw);
+            gap: .3em;
+            color: var(--background);
+        }
+        & input, textarea {
+            font-size: calc(1rem + .5vw);
+            font-family: var(--sub);
+            padding: .75em .5em;
+        }
+    & form .input-container, form .textarea-container {
+        position: relative;
+        border-radius: .5em 0 0 .5em;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary);
+        border: solid .1em var(--primary);
+    }
+    & input:focus ~ label, textarea:focus ~ label {
+        padding: .5em .7em;
+    }
+    & label {
+        transition: .2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: .5em;
+        text-align: center;
+       
+    }
+    & input, textarea {
+        border: none;
+        background-color: var(--grey);
+        width: 30ch;
+    }
+    & button {
+        background-color: var(--primary);
+        color: var(--background);
+        font-family: var(--title);
+        border: none;
+        font-weight: 1000;
+        padding: .25em .5em;
+        font-size: calc(1rem + 1vw);
+        position: absolute;
+        bottom: 0;
+        left: calc(100% + 1em);
+        transition: .2s;
+    }
+    & button:hover {
+        scale: .9;
+    }
+
+    & h6 {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: calc(1rem + 2vw);
+            font-weight: 1000;
+            font-family: var(--title);
+        }
+    
+    & p {
+            margin: 1em 1em 0 1em;
+            text-align: center;
+            font-size: calc(1rem + .2vw);
+            font-weight: 400;
+            font-family: var(--sub);
+     }
+     .contact-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+     }
+     .contact-info {
+        padding: 5vw;
+        text-align: left;
+        opacity: .8;
+     }
+
+     & lead {
+            text-transform: uppercase;
+            font-size: calc(1rem + .5vw);
+            font-weight: 1000;
+            font-family: var(--title);
+     }
+     & ul {
+        margin: 1em 1em 2em 1em;
+        list-style-type: none;
+        text-decoration: none;
+        font-size: calc(1rem + .2vw);
+            font-weight: 400;
+            font-family: var(--sub);
+     }
+     & li {
+        padding: .5em;
+     }
+}
+
+@media (width < 1200px) {
+    #contact {
+        & button {
+            left: initial;
+            bottom: initial;
+            top: calc(100% + 1em);
+            right: 0;
+        }& input,
+        textarea {
+            width: 70vw;
+        }
+        & form {
+            padding-bottom: 4em;
+            padding-top: 5vw;
+        }
+    }
+}
