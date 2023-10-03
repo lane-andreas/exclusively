@@ -52,6 +52,7 @@ body {
 }
 
 .catch {
+    position: relative;
     text-align: center;
     font-weight: 300;
     font-size: calc(1rem + .15vw);
@@ -59,6 +60,26 @@ body {
     background-color: var(--text);
     color: var(--background);
     padding: .5em;
+     .catch-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1em;
+        position: absolute;
+        top: calc(100vh -  5em);
+        left: 1em;
+        text-decoration: inherit;
+        color: inherit;
+    }
+    & a {
+        text-shadow: 0 0 2vw black;
+        white-space: nowrap;
+        text-decoration: inherit;
+            color: inherit;
+    }
+    & iconify-icon {
+        margin-right: .3em;
+    }
 }
 
 nav {
@@ -217,9 +238,9 @@ header {
     text-align: center;
     height: 100vh;
     height: 100lvh;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .5))), url(kitchen4.avif);
-    background-image: -o-linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(kitchen4.avif);
-    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(kitchen4.avif);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .5))), url(hero.avif);
+    background-image: -o-linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(hero.avif);
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(hero.avif);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -464,7 +485,7 @@ footer {
     }
 }
 
-main {
+#about {
     padding-bottom: 10vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -519,7 +540,7 @@ main {
 }
 
 @media (width< 1000px) {
-    main {
+    #about {
         min-height: 100vh;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -549,7 +570,7 @@ main {
     }
 }
 
-.services {
+#services {
     padding-top: 10vh;
     min-height: 100vh;
     background-color: var(--grey);
@@ -633,39 +654,39 @@ main {
     }
 
     & .service-boxes div:nth-of-type(1) {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('kitchen5.avif');
-        background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen5.avif');
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen5.avif');
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('services-imgs/kitchen5.avif');
+        background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('services-imgs/kitchen5.avif');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('services-imgs/kitchen5.avif');
     }
 
     & .service-boxes div:nth-of-type(2) {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('kitchen6.avif');
-        background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen6.avif');
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen6.avif');
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('services-imgs/kitchen6.avif');
+        background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('services-imgs/kitchen6.avif');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('services-imgs/kitchen6.avif');
     }
 
     & .service-boxes div:nth-of-type(3) {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('kitchen3.avif');
-        background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen3.avif');
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen3.avif');
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('services-imgs/kitchen3.avif');
+        background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('services-imgs/kitchen3.avif');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('services-imgs/kitchen3.avif');
     }
 
     & .service-boxes div:nth-of-type(4) {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('kitchen8.avif');
-        background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen8.avif');
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen8.avif');
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('services-imgs/kitchen8.avif');
+        background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('services-imgs/kitchen8.avif');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('services-imgs/kitchen8.avif');
     }
 
     & .service-boxes div:nth-of-type(5) {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('kitchen2.avif');
-        background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen2.avif');
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen2.avif');
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('services-imgs/kitchen2.avif');
+        background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('services-imgs/kitchen2.avif');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('services-imgs/kitchen2.avif');
     }
 
     & .service-boxes div:nth-of-type(6) {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('kitchen7.avif');
-        background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen7.avif');
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('kitchen7.avif');
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('services-imgs/kitchen7.avif');
+        background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('services-imgs/kitchen7.avif');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('services-imgs/kitchen7.avif');
     }
 }
 
@@ -687,3 +708,88 @@ main {
         grid-template-columns: 1fr !important;
     }
 }
+
+#portfolio {
+    padding-top: 10vh;
+    & h5 {
+        text-align: center;
+            text-transform: uppercase;
+            font-size: calc(1rem + 2vw);
+            font-weight: 1000;
+            font-family: var(--title);
+    }
+    & p {
+        margin: 1em 1em 0 1em;
+        text-align: center;
+        font-size: calc(1rem + .2vw);
+        font-weight: 400;
+        font-family: var(--sub);
+    }
+    & img {
+        width: 100%;
+       height: 70vh;
+        object-fit: cover;
+        border: solid .1em black;
+        border-radius: .5em;
+    }
+    .mySlides::before {
+                z-index: -1;
+                content: '';
+                position: absolute;
+                bottom: -.75em;
+                left: 25%;
+                width: 50%;
+                height: 2em;
+                background-color: var(--primary);
+                border-radius: 1em;
+                -webkit-transition: .2s;
+                -o-transition: .2s;
+                transition: .2s;
+    }
+        .mySlides:hover::before {
+            width: 80%;
+            left: 10%;
+        }
+    
+        .slideshow-container {
+            padding-top: 5vw;
+            width: min(1000px, 85vw);
+            position: relative;
+            margin: auto;
+        }
+    
+        .mySlides {
+            display: none;
+        }
+    
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            background-color: var(--primary);
+            user-select: none;
+            font-size: calc(2rem + 3vw);
+            color: var(--background);
+            border-radius: 50%;
+            width: 1em;
+            height: 1em;
+            transition: .2s;
+        }
+    
+        .prev {
+            left: -.5em;
+           
+        }
+        .next {
+            right: -.5em;
+
+        }
+    
+        .prev:hover,
+        .next:hover {
+        scale: .9;
+        }
+    
+    }
+    
