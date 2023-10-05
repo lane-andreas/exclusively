@@ -5,5 +5,16 @@
 }
 
 body {
+  line-height: 1.5;
   padding: 3em;
+}
+
+h1 {
+  font-family:  'Satoshi', sans-serif;
+   
+}
+
+p {
+  padding: 1em;
+  font-family: 'General Sans', sans-serif;
 }
