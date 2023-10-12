@@ -518,6 +518,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-flow: row wrap;
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
@@ -570,6 +571,16 @@ footer {
     object-fit: contain;
     max-width: max(10vw, 10vh);
   }
+  .areas {
+    margin: 3em;
+    flex-basis: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    font-size: calc(1rem + 0.5vw);
+    font-weight: 1000;
+    font-family: var(--title);
+  }
 }
 
 @media (width< 1000px) {
@@ -599,6 +610,16 @@ footer {
 
     & h3 {
       text-align: center;
+    }
+    .areas {
+      margin: 8vw 5vw 0;
+      flex-basis: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      place-items: center;
+      font-size: calc(1rem + 0.5vw);
+      font-weight: 1000;
+      font-family: var(--title);
     }
   }
 }
