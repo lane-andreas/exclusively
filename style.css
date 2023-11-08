@@ -566,10 +566,17 @@ footer {
     gap: 2em;
   }
 
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max(10vw, 10vh);
+  }
+
   & img {
     -o-object-fit: contain;
     object-fit: contain;
-    max-width: max(10vw, 10vh);
+    width: max(10vw, 10vh);
   }
   .areas {
     margin: 3em;
@@ -1028,11 +1035,11 @@ footer {
     top: -0.2em;
   }
 
-  .review:nth-of-type(1)::before {
+  .review:nth-of-type(odd)::before {
     right: 1em;
   }
 
-  .review:nth-of-type(2)::before {
+  .review:nth-of-type(even)::before {
     left: 1em;
   }
 
@@ -1044,7 +1051,7 @@ footer {
     margin: 5vw auto 0 5vw;
   }
 
-  .review:nth-of-type(1) .person {
+  .review:nth-of-type(odd) .person {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1053,7 +1060,7 @@ footer {
     align-items: flex-end;
   }
 
-  .review:nth-of-type(2) .person {
+  .review:nth-of-type(even) .person {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1072,14 +1079,10 @@ footer {
     color: var(--text);
   }
 
-  & img {
-    z-index: 15;
-    height: 5em;
-    border-radius: 50%;
-    aspect-ratio: 1;
-    -o-object-fit: cover;
-    object-fit: cover;
-    margin: 0 1em;
+  & iconify-icon {
+    font-size: 5em;
+    margin: 0 0.1em;
+    z-index: 10;
   }
 
   .review p {
