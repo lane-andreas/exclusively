@@ -44,6 +44,7 @@
   </head>
 
   <body ontouchstart="">
+    <div id="background" class="display-none" onclick="modul('#image-3')"></div>
     <div id="home" class="catch">
       <a href="#contact">Get your free estimate today!</a>
       <div class="catch-links">
@@ -212,79 +213,31 @@
         We take pride in our diverse range of projects, from modern, minimalist
         kitchens to luxurious spa-inspired bathrooms.
       </p>
-      <div class="CSSgal">
-        <s id="s1" aria-hidden="true"></s>
-        <s id="s2" aria-hidden="true"></s>
-        <s id="s3" aria-hidden="true"></s>
-        <s id="s4" aria-hidden="true"></s>
-        <div class="slider">
-          <img
-            src="portfolio-imgs/IMG_4301.avif"
-            alt="renovated kitchen with white countertops and baby blue cupboards"
-          />
-          <img
-            src="portfolio-imgs/IMG_3475.avif"
-            alt="renovated kitchen with dark countertops and dark brown cupboards"
-          />
-          <img
-            src="portfolio-imgs/IMG_8407.avif"
-            alt="renovated kitchen with tan countertops and white cupboards"
-          />
-          <img
-            src="portfolio-imgs//IMG_8877.avif"
-            alt="renovated kitchen with grey countertops and white cupboards"
-          />
-        </div>
-        <div class="prevNext">
-          <div>
-            <a href="#s4">
-              <iconify-icon
-                icon="material-symbols:arrow-left-rounded"
-              ></iconify-icon>
-            </a>
-            <a href="#s2">
-              <iconify-icon
-                icon="material-symbols:arrow-right-rounded"
-              ></iconify-icon>
-            </a>
-          </div>
-          <div>
-            <a href="#s1">
-              <iconify-icon
-                icon="material-symbols:arrow-left-rounded"
-              ></iconify-icon>
-            </a>
-            <a href="#s3">
-              <iconify-icon
-                icon="material-symbols:arrow-right-rounded"
-              ></iconify-icon>
-            </a>
-          </div>
-          <div>
-            <a href="#s2">
-              <iconify-icon
-                icon="material-symbols:arrow-left-rounded"
-              ></iconify-icon>
-            </a>
-            <a href="#s4">
-              <iconify-icon
-                icon="material-symbols:arrow-right-rounded"
-              ></iconify-icon>
-            </a>
-          </div>
-          <div>
-            <a href="#s3">
-              <iconify-icon
-                icon="material-symbols:arrow-left-rounded"
-              ></iconify-icon>
-            </a>
-            <a href="#s1">
-              <iconify-icon
-                icon="material-symbols:arrow-right-rounded"
-              ></iconify-icon>
-            </a>
-          </div>
-        </div>
+
+      <div id="slideshow-container">
+        <div class="slides" id="slidesContainer"></div>
+        <button id="prevBtn" onclick="changeSlide(-1)">❮</button>
+        <button id="nextBtn" onclick="changeSlide(1)">❯</button>
+      </div>
+      <div class="button-container">
+        <button
+          class="category-btn"
+          onclick="changeCategory(category1Images), buttonColor(0)"
+        >
+          Kitchens
+        </button>
+        <button
+          class="category-btn"
+          onclick="changeCategory(category2Images), buttonColor(1)"
+        >
+          Bathrooms
+        </button>
+        <button
+          class="category-btn"
+          onclick="changeCategory(category3Images), buttonColor(2)"
+        >
+          Other
+        </button>
       </div>
     </section>
     <section id="reviews">
@@ -333,6 +286,7 @@
           method="POST"
           aria-label="contact form"
         >
+          <input type="hidden" name="_cc" value="laaaandreas@gmail.com" />
           <div class="input-container">
             <input
               type="text"
