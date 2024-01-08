@@ -94,17 +94,11 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    font-size: calc(1.5rem + 1vw);
     gap: 1em;
     position: absolute;
-    top: calc(100vh - 5em);
-    top: calc(100svh - 5em);
+    top: calc(100vh - 2em);
+    top: calc(100svh - 2em);
     left: 1em;
     text-decoration: inherit;
     color: inherit;
@@ -609,17 +603,28 @@ footer {
     width: max(10vw, 10vh);
   }
   .areas {
-    margin: 3em;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    place-items: center;
+    gap: 1em;
+    margin-top: 5em;
+    display: flex;
+    flex-flow: row wrap;
     font-size: calc(1rem + 0.5vw);
     font-weight: 1000;
     font-family: var(--title);
+    justify-content: center;
+    align-items: center;
+  }
+  .areas p {
+    transition: 0.3s;
+    text-align: center;
+    width: 12ch;
+    border: 2px solid var(--text);
+    opacity: 1;
+
+    border-radius: 2em;
+    box-shadow: 3px 3px black;
+  }
+  .areas p:hover {
+    box-shadow: 0 0 black;
   }
 }
 
@@ -650,19 +655,6 @@ footer {
 
     & h3 {
       text-align: center;
-    }
-    .areas {
-      margin: 8vw 5vw 0;
-      -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-      display: -ms-grid;
-      display: grid;
-      -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-      place-items: center;
-      font-size: calc(1rem + 0.5vw);
-      font-weight: 1000;
-      font-family: var(--title);
     }
   }
 }
@@ -752,7 +744,7 @@ footer {
 
   & .service-boxes div:nth-of-type(1) {
     background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("services-imgs/kitchen5.avif");
+      url("services-imgs/kitchen3.avif");
     background-image: -webkit-gradient(
         linear,
         left top,
@@ -760,14 +752,14 @@ footer {
         from(rgba(0, 0, 0, 0.5)),
         to(rgba(0, 0, 0, 0.5))
       ),
-      url("services-imgs/kitchen5.avif");
+      url("services-imgs/kitchen3.avif");
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("services-imgs/kitchen5.avif");
+      url("services-imgs/kitchen3.avif");
   }
 
   & .service-boxes div:nth-of-type(2) {
     background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("services-imgs/kitchen6.avif");
+      url("services-imgs/kitchen8.avif");
     background-image: -webkit-gradient(
         linear,
         left top,
@@ -775,14 +767,14 @@ footer {
         from(rgba(0, 0, 0, 0.5)),
         to(rgba(0, 0, 0, 0.5))
       ),
-      url("services-imgs/kitchen6.avif");
+      url("services-imgs/kitchen8.avif");
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("services-imgs/kitchen6.avif");
+      url("services-imgs/kitchen8.avif");
   }
 
   & .service-boxes div:nth-of-type(3) {
     background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("services-imgs/kitchen3.avif");
+      url("services-imgs/kitchen2.avif");
     background-image: -webkit-gradient(
         linear,
         left top,
@@ -790,14 +782,14 @@ footer {
         from(rgba(0, 0, 0, 0.5)),
         to(rgba(0, 0, 0, 0.5))
       ),
-      url("services-imgs/kitchen3.avif");
+      url("services-imgs/kitchen2.avif");
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("services-imgs/kitchen3.avif");
+      url("services-imgs/kitchen2.avif");
   }
 
   & .service-boxes div:nth-of-type(4) {
     background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("services-imgs/kitchen8.avif");
+      url("services-imgs/kitchen5.avif");
     background-image: -webkit-gradient(
         linear,
         left top,
@@ -805,14 +797,14 @@ footer {
         from(rgba(0, 0, 0, 0.5)),
         to(rgba(0, 0, 0, 0.5))
       ),
-      url("services-imgs/kitchen8.avif");
+      url("services-imgs/kitchen5.avif");
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("services-imgs/kitchen8.avif");
+      url("services-imgs/kitchen5.avif");
   }
 
   & .service-boxes div:nth-of-type(5) {
     background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("services-imgs/kitchen2.avif");
+      url("services-imgs/kitchen6.avif");
     background-image: -webkit-gradient(
         linear,
         left top,
@@ -820,9 +812,9 @@ footer {
         from(rgba(0, 0, 0, 0.5)),
         to(rgba(0, 0, 0, 0.5))
       ),
-      url("services-imgs/kitchen2.avif");
+      url("services-imgs/kitchen6.avif");
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("services-imgs/kitchen2.avif");
+      url("services-imgs/kitchen6.avif");
   }
 
   & .service-boxes div:nth-of-type(6) {
@@ -903,6 +895,7 @@ footer {
     -webkit-box-shadow: 5px 5px black;
     box-shadow: 5px 5px black;
     max-width: 90vw;
+    object-fit: cover;
   }
   & img:nth-of-type(1) {
     -o-object-fit: cover;

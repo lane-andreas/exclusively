@@ -10,61 +10,79 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const category1Images = [
-  "portfolio-imgs/IMG_1640_result_result.webp",
-  "portfolio-imgs/IMG_2113_result_result.webp",
-  "portfolio-imgs/IMG_2123_result_result.webp",
-  "portfolio-imgs/IMG_2157_result_result.webp",
-  "portfolio-imgs/IMG_2164_result_result.webp",
-  "portfolio-imgs/IMG_2168_result_result.webp",
-  "portfolio-imgs/IMG_3466_result_result.webp",
-  "portfolio-imgs/IMG_3863_result_result.webp",
-  "portfolio-imgs/IMG_4189_result_result.webp",
-  "portfolio-imgs/IMG_4205_result_result.webp",
-  "portfolio-imgs/IMG_8876_result_result.webp",
-  "portfolio-imgs/IMG_8879_result_result.webp",
-  "portfolio-imgs/IMG_9951_result_result.webp",
-  "portfolio-imgs/IMG_9953_result_result.webp",
-  "portfolio-imgs/IMG_9955_result_result.webp",
-  "portfolio-imgs/IMG_0459_result_result.webp",
-  "portfolio-imgs/IMG_0507_result_result.webp",
-  "portfolio-imgs/IMG_1020_result_result.webp",
+  "KitchenImage01.webp",
+  "KitchenImage02.webp",
+  "KitchenImage03.webp",
+  "KitchenImage04.webp",
+  "KitchenImage05.webp",
+  "KitchenImage06.webp",
+  "KitchenImage07.webp",
+  "KitchenImage08.webp",
+  "KitchenImage09.webp",
+  "KitchenImage10.webp",
+  "KitchenImage11.webp",
+  "KitchenImage12.webp",
+  "KitchenImage13.webp",
+  "KitchenImage14.webp",
+  "KitchenImage15.webp",
+  "KitchenImage16.webp",
+  "KitchenImage17.webp",
+  "KitchenImage18.webp",
+  "KitchenImage19.webp",
+  "KitchenImage20.webp",
+  "KitchenImage21.webp",
+  "KitchenImage22.webp",
+  "KitchenImage23.webp",
+  "KitchenImage24.webp",
+  "KitchenImage25.webp",
+  "KitchenImage26.webp",
+  "KitchenImage27.webp",
+  "KitchenImage28.webp",
+  "KitchenImage29.webp",
+  "KitchenImage30.webp",
 ];
 
 // Array of images for the second category
 const category2Images = [
-  "portfolio-imgs/IMG_1684_result.webp",
-  "portfolio-imgs/IMG_2179_result.webp",
-  "portfolio-imgs/IMG_4111_result.webp",
-  "portfolio-imgs/IMG_4182_result.webp",
-  "portfolio-imgs/IMG_8031_result.webp",
-  "portfolio-imgs/IMG_8042_result.webp",
-  "portfolio-imgs/IMG_0269_result.webp",
-  "portfolio-imgs/IMG_0278_result.webp",
-  "portfolio-imgs/IMG_0290_result.webp",
-  "portfolio-imgs/IMG_0824_result.webp",
-  "portfolio-imgs/IMG_0825_result.webp",
-  "portfolio-imgs/IMG_1127_result.webp",
-  "portfolio-imgs/IMG_1652_result.webp",
-  "portfolio-imgs/IMG_1656_result.webp",
+  "BathroomImage01.webp",
+  "BathroomImage02.webp",
+  "BathroomImage03.webp",
+  "BathroomImage04.webp",
+  "BathroomImage05.webp",
+  "BathroomImage06.webp",
+  "BathroomImage07.webp",
+  "BathroomImage08.webp",
+  "BathroomImage09.webp",
+  "BathroomImage10.webp",
+  "BathroomImage11.webp",
+  "BathroomImage12.webp",
+  "BathroomImage13.webp",
+  "BathroomImage14.webp",
+  "BathroomImage15.webp",
+  "BathroomImage16.webp",
+  "BathroomImage17.webp",
+  "BathroomImage18.webp",
+  "BathroomImage19.webp",
+  "BathroomImage20.webp",
+  "BathroomImage21.webp",
+  "BathroomImage22.webp",
+  "BathroomImage23.webp",
 ];
 
 // Array of images for the third category
 const category3Images = [
-  "portfolio-imgs/Image11.webp",
-  "portfolio-imgs/Image12.webp",
-  "portfolio-imgs/Image13.webp",
-  "portfolio-imgs/Image14.webp",
-  "portfolio-imgs/Image15.webp",
-  "portfolio-imgs/Image01.webp",
-  "portfolio-imgs/Image02.webp",
-  "portfolio-imgs/Image03.webp",
-  "portfolio-imgs/Image04.webp",
-  "portfolio-imgs/Image05.webp",
-  "portfolio-imgs/Image06.webp",
-  "portfolio-imgs/Image07.webp",
-  "portfolio-imgs/Image08.webp",
-  "portfolio-imgs/Image09.webp",
-  "portfolio-imgs/Image10.webp",
+  "OtherImage01.webp",
+  "OtherImage02.webp",
+  "OtherImage03.webp",
+  "OtherImage04.webp",
+  "OtherImage05.webp",
+  "OtherImage06.webp",
+  "OtherImage07.webp",
+  "OtherImage08.webp",
+  "OtherImage09.webp",
+  "OtherImage10.webp",
+  "OtherImage11.webp",
+  "OtherImage12.webp",
 ];
 const slidesContainer = document.getElementById("slidesContainer");
 const prevBtn = document.getElementById("prevBtn");
@@ -75,7 +93,7 @@ let previousIndex = 0;
 let nextIndex = 2;
 
 function showSlides() {
-  slidesContainer.innerHTML = `<img src="${currentCategory[previousIndex]} "alt="Service by Kitchens & Bathrooms" onclick="modul('#image-1')" id="image-1"><img src="${currentCategory[nextIndex]}" alt="Service by Kitchens & Bathrooms" onclick="modul('#image-2')" id="image-2"><img src="${currentCategory[currentIndex]}" alt="Service by Kitchens & Bathrooms" onclick="modul('#image-3')" id="image-3">`;
+  slidesContainer.innerHTML = `<img src="portfolio-imgs/${currentCategory[previousIndex]} "alt="Service by Kitchens & Bathrooms" onclick="modul('#image-1')" id="image-1"><img src="portfolio-imgs/${currentCategory[nextIndex]}" alt="Service by Kitchens & Bathrooms" onclick="modul('#image-2')" id="image-2"><img src="portfolio-imgs/${currentCategory[currentIndex]}" alt="Service by Kitchens & Bathrooms" onclick="modul('#image-3')" id="image-3">`;
 }
 
 function changeSlide(n) {
@@ -118,17 +136,6 @@ function buttonColor(index) {
   currentButtonIndex = index;
   buttons[currentButtonIndex].style.boxShadow = "0 0 black";
 }
-
-function preloadImages(array) {
-  for (var i = 0; i < array.length; i++) {
-    var img = new Image();
-    img.src = array[i];
-  }
-}
-
-window.onload = preloadImages(category1Images);
-window.onload = preloadImages(category2Images);
-window.onload = preloadImages(category3Images);
 
 function modul(image) {
   const select = document.querySelector(image);
